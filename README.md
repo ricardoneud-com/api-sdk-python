@@ -134,7 +134,7 @@ except Exception as error:
 The SDK is fully typed with Python type hints and is compatible with modern IDEs such as PyCharm and VS Code.
 
 ```python
-from ricardoneud_api.client import RicardoNeudAPI
+from ricardoneud.api.client import RicardoNeudAPI
 
 api = RicardoNeudAPI(api_key='your-api-key', version='v4')
 ```
