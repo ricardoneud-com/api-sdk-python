@@ -18,9 +18,8 @@ The client can be initialized with either an **API Key**, a **Secret token**, an
 from ricardoneud.api.client import RicardoNeudAPI
 
 api = RicardoNeudAPI(
-    api_key='your-api-key',        # OR use secret='your-secret'
-    version='v4',
-    base_url='https://sandbox.api.ricardoneud.com'  # Optional, defaults to https://api.ricardoneud.com
+    api_key='your-api-key', # OR use secret='your-secret'
+    version='v4'
 )
 ```
 
