@@ -1,6 +1,6 @@
 [project]
 name = "ricardoneud-api"
-version = "1.0.2"
+version = "1.2.0"
 description = "Official Python SDK for the API from Ricardoneud.com"
 authors = [
   { name = "Ricardoneud.com" }
