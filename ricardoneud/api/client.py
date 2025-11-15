@@ -63,3 +63,7 @@ class RicardoNeudAPI:
         self.secret = secret
         self.api_key = None
         return self
+
+    def set_url(self, url):
+        self.base_url = f"{url}/{self.version}"
+        return self
