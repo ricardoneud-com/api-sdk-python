@@ -38,6 +38,8 @@ class RicardoNeudAPI:
                 r = requests.get(url, headers=headers, params=data, timeout=self.timeout)
             elif method.upper() == 'POST':
                 r = requests.post(url, headers=headers, json=data, timeout=self.timeout)
+            elif method.upper() == 'PATCH':
+                r = requests.patch(url, headers=headers, json=data, timeout=self.timeout)
             elif method.upper() == 'PUT':
                 r = requests.put(url, headers=headers, json=data, timeout=self.timeout)
             elif method.upper() == 'DELETE':
