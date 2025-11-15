@@ -12,15 +12,24 @@ pip install ricardoneud-api
 
 ## Initialization
 
-The client can be initialized with either an **API Key** or a **Secret token**:
+The client can be initialized with either an **API Key**, a **Secret token**, and optionally a **custom URL**:
 
 ```python
 from ricardoneud.api.client import RicardoNeudAPI
 
 api = RicardoNeudAPI(
-    api_key='your-api-key',  # OR use secret='your-secret'
-    version='v4'
+    api_key='your-api-key',        # OR use secret='your-secret'
+    version='v4',
+    base_url='https://sandbox.api.ricardoneud.com'  # Optional, defaults to https://api.ricardoneud.com
 )
+```
+
+### Changing Base URL
+
+You can change the API endpoint at runtime using `set_url`:
+
+```python
+api.set_url('https://sandbox.api.ricardoneud.com')  # Switch to sandbox environment
 ```
 
 ### Changing Version
@@ -144,4 +153,6 @@ api = RicardoNeudAPI(api_key='your-api-key', version='v4')
 * You must provide either an **API Key** or a **Secret token**.
 * Secret tokens expire after 24 hours and are visible in your dashboard.
 * API Key and Secret are mutually exclusive; setting one clears the other.
+* You can optionally provide a **custom `base_url`** at initialization. If omitted, the SDK defaults to `https://api.ricardoneud.com`.
+* The `set_url` method allows switching API domains at runtime (e.g., sandbox).
 * Always check the supported API version to ensure endpoint compatibility.
